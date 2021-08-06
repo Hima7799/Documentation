@@ -49,35 +49,36 @@ Task:
    
    **Network ubuntu and postgres
   
-1.docker network ls                               
-2.docker network create --driver driver_name network_name
-  exact command used by mine(docker network create --driver bridge new_network) 
-3.docker run -it --network=new_network ubuntu:latest /bin/bash 
-4.docker run -it --network=new_network --name hima_postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
-5.docker inspect new_network
-@@ got connected network
-
+       1.docker network ls                               
+       2.docker network create --driver driver_name network_name
+         exact command used by mine(docker network create --driver bridge new_network) 
+       3.docker run -it --network=new_network ubuntu:latest /bin/bash 
+       4.docker run -it --network=new_network --name hima_postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+       5.docker inspect new_network
+       @@ got connected network
 
 **connect to postgres from notebook
   
-  1.pip install ipython-sql
-  2.pip list
-  3.pip install psycopg2
-  @@ used this but got error
-  4.pip install psycopg2-binary
-  @@got installed
-  5.pip install sqlalchemy
-  6.%load_ext sql
-  7.from sqlalchemy import create_engine
-  8.%sql dialect+driver://username:password@host:port/database
-  @@ got error Connection info needed in SQLAlchemy format, example:
-               postgresql://username:password@hostname/dbname
-               or an existing connection: dict_keys([])
-               invalid literal for int() with base 10: 'port'
-               Connection info needed in SQLAlchemy format, example:
-               postgresql://username:password@hostname/dbname
-               or an existing connection: dict_keys([])
-    got errors and stucked
+       1.pip install ipython-sql
+       2.pip list
+       3.pip install psycopg2
+       @@ used this but got error
+       4.pip install psycopg2-binary
+       @@got installed
+       5.pip install sqlalchemy
+       6.%load_ext sql
+       7.from sqlalchemy import create_engine
+       8.%sql dialect+driver://username:password@host:port/database
+       @@ got error Connection info needed in SQLAlchemy format, example:
+                    postgresql://username:password@hostname/dbname
+                    or an existing connection: dict_keys([])
+                    invalid literal for int() with base 10: 'port'
+                    Connection info needed in SQLAlchemy format, example:
+                    postgresql://username:password@hostname/dbname
+                    or an existing connection: dict_keys([])
+         got errors and stucked
+  
+  
   **Day3:
     
     connected to postgres from jupyter :
@@ -113,19 +114,19 @@ Task:
 
 **Day1:Docker:
 
-  installation-> https://docs.docker.com/docker-for-windows/install/
-  errors-> https://www.bing.com/videos/search?view=detail&mid=C12FF81E191DA0CA296AC12FF81E191DA0CA296A&q=docker
-  ubuntu -> http://www.servermom.org/pull-docker-images-run-docker-containers/3225/#:~:text=To%20pull%20an%20image%2C%20use%20%E2%80%9C%20docker%20pull,your%20server%2C%20use%20%E2%80%9C%20docker%20images%20%E2%80%9D%20command
-  python -> https://www.datasciencelearner.com/install-and-run-python-in-docker-container
-  **Day2:
- 1. https://gregtczap.com/blog/docker-postgres-ubuntu-localhost/
- 2. https://www.geeksforgeeks.org/creating-a-network-in-docker-and-connecting-a-container-to-that-network/#:~:text=%20%20%201%20Step%201%3A%20.%20In,next%20step%20connect%20the%20container%20to...%20More%20
- 3. https://www.bing.com/videos/search?view=detail&mid=56AFAB710730DE000BDE56AFAB710730DE000BDE&q=connect
- 4. https://www.youtube.com/watch?v=aHbE3pTyG-Q
- 5. https://www.youtube.com/watch?v=2PDkXviEMD0
- 6. https://shravan-kuchkula.github.io/sql/postgres-jupyter/#step-1-first-make-sure-you-install-homebrew-if-you-dont-already-have-it
- 7. https://medium.com/analytics-vidhya/postgresql-integration-with-jupyter-notebook-deb97579a38d
- 8. https://blog.panoply.io/connecting-jupyter-notebook-with-postgresql-for-python-data-analysis#:~:text=%20Connecting%20Python%20pandas%20and%20Jupyter%20Notebooks%20to,following%20along%20in%20your%20own%20Jupyter...%20More%20
- **Day3-
-   https://www.datacamp.com/community/tutorials/sql-interface-within-jupyterlab
-   (https://medium.com/analytics-vidhya/postgresql-integration-with-jupyter-notebook-deb97579a38d
+        installation-> https://docs.docker.com/docker-for-windows/install/
+        errors-> https://www.bing.com/videos/search?view=detail&mid=C12FF81E191DA0CA296AC12FF81E191DA0CA296A&q=docker
+        ubuntu -> http://www.servermom.org/pull-docker-images-run-docker-containers/3225/#:~:text=To%20pull%20an%20image%2C%20use%20%E2%80%9C%20docker%20pull,your%20server%2C%20use%20%E2%80%9C%20docker%20images%20%E2%80%9D%20command
+        python -> https://www.datasciencelearner.com/install-and-run-python-in-docker-container
+        **Day2:
+       1. https://gregtczap.com/blog/docker-postgres-ubuntu-localhost/
+       2. https://www.geeksforgeeks.org/creating-a-network-in-docker-and-connecting-a-container-to-that-network/#:~:text=%20%20%201%20Step%201%3A%20.%20In,next%20step%20connect%20the%20container%20to...%20More%20
+       3. https://www.bing.com/videos/search?view=detail&mid=56AFAB710730DE000BDE56AFAB710730DE000BDE&q=connect
+       4. https://www.youtube.com/watch?v=aHbE3pTyG-Q
+       5. https://www.youtube.com/watch?v=2PDkXviEMD0
+       6. https://shravan-kuchkula.github.io/sql/postgres-jupyter/#step-1-first-make-sure-you-install-homebrew-if-you-dont-already-have-it
+       7. https://medium.com/analytics-vidhya/postgresql-integration-with-jupyter-notebook-deb97579a38d
+       8. https://blog.panoply.io/connecting-jupyter-notebook-with-postgresql-for-python-data-analysis#:~:text=%20Connecting%20Python%20pandas%20and%20Jupyter%20Notebooks%20to,following%20along%20in%20your%20own%20Jupyter...%20More%20
+       **Day3-
+         https://www.datacamp.com/community/tutorials/sql-interface-within-jupyterlab
+         (https://medium.com/analytics-vidhya/postgresql-integration-with-jupyter-notebook-deb97579a38d
